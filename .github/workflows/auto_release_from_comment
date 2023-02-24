@@ -1,0 +1,19 @@
+name: "Auto Publish from Comment"
+on:
+  issue_comment:
+    types: [created]
+jobs:
+  auto_release_with_comment:
+    if: github.event.issue.number == 1 # Set it for specific issue number
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: dart-lang/setup-dart@v1.3
+      - name: auto release with comment
+        uses: cfug/dio_issue_release_action@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          pub-credentials-json: ${{ secrets.PUB_CREDENTIALS_JSON }}
+          dry-run: true
