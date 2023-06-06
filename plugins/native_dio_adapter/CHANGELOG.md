@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+*None.*
+
+## 0.2.0
+
 - Update dependencies to make use of stable versions.
 - Replace `DioError` with `DioException`.
 - Fix `onReceiveProgress` callback.
