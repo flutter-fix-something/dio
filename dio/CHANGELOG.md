@@ -7,6 +7,10 @@ See the [Migration Guide][] for the complete breaking changes list.**
 
 *None.*
 
+## 6.1.0
+
+*None.*
+
 ## 6.2.0
 
 *None.*
